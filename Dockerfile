@@ -37,4 +37,7 @@ VOLUME /etc/motion
 # R/W needed for motion to update Video & images
 VOLUME /var/lib/motion
 
+CMD test -e /usr/local/etc/motion/motion.conf || \    
+    cp /usr/local/etc/motion/motion-dist.conf /usr/local/etc/motion/motion.conf 
+
 CMD [ "motion", "-n" ]
