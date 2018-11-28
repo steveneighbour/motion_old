@@ -1,0 +1,10 @@
+version: '3'
+services:
+
+  motion:
+    image: motion-project/motion:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/volume1/motion/config:/usr/local/etc/motion"
+      - "/volume1/motion/storage:/var/lib/motion"
