@@ -17,7 +17,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 RUN apt-get update && apt-get install -y --no-install-recommends \
     autoconf automake build-essential pkgconf libtool libzip-dev libjpeg-dev \
     git libavformat-dev libavcodec-dev libavutil-dev libswscale-dev libavdevice-dev \
-    libwebp-dev gettext libmicrohttpd-dev ca-certificates \
+    libwebp-dev gettext libmicrohttpd-dev ca-certificates imagemagick \
     libavformat-dev libavcodec-dev libavutil-dev libswscale-dev libavdevice-dev && \
     apt-get --quiet autoremove --yes && \
     apt-get --quiet --yes clean && \
