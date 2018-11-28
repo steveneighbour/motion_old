@@ -17,7 +17,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 RUN apt-get update && apt-get install -y --no-install-recommends \
     autoconf automake build-essential pkgconf libtool libzip-dev libjpeg-dev \
     git libavformat-dev libavcodec-dev libavutil-dev libswscale-dev libavdevice-dev \
-    libwebp-dev gettext libmicrohttpd-dev ca-certificates imagemagick \
+    libwebp-dev gettext libmicrohttpd-dev ca-certificates imagemagick curl wget \
     libavformat-dev libavcodec-dev libavutil-dev libswscale-dev libavdevice-dev && \
     apt-get --quiet autoremove --yes && \
     apt-get --quiet --yes clean && \
@@ -27,6 +27,7 @@ RUN git clone https://github.com/Motion-Project/motion.git  && \
    cd motion  && \
    autoreconf -fiv && \
    ./configure && \
+   make clean && \
    make && \
    make install && \
    cd .. && \
