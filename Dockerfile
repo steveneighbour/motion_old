@@ -37,6 +37,4 @@ VOLUME /etc/motion
 # R/W needed for motion to update Video & images
 VOLUME /var/lib/motion
 
-EXPOSE 7999
-
 CMD [ "motion", "-n" ]
