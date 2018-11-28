@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     autoconf automake build-essential pkgconf libtool libzip-dev libjpeg-dev \
     git libavformat-dev libavcodec-dev libavutil-dev libswscale-dev libavdevice-dev \
     libwebp-dev gettext libmicrohttpd-dev ca-certificates imagemagick curl wget \
-    libavformat-dev libavcodec-dev libavutil-dev libswscale-dev libavdevice-dev && \
+    libavformat-dev libavcodec-dev libavutil-dev libswscale-dev libavdevice-dev ffmpeg && \
     apt-get --quiet autoremove --yes && \
     apt-get --quiet --yes clean && \
     rm -rf /var/lib/apt/lists/*
