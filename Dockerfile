@@ -33,7 +33,7 @@ RUN git clone https://github.com/Motion-Project/motion.git  && \
    rm -fr motion
 
 # R/W needed for motion to update configurations
-VOLUME /etc/motion
+VOLUME /usr/local/etc/motion
 # R/W needed for motion to update Video & images
 VOLUME /var/lib/motion
 
