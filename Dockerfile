@@ -30,7 +30,7 @@ RUN git clone https://github.com/Motion-Project/motion.git  && \
    make && \
    make install && \
    cd .. && \
-   rm -fr motion && \
+   rm -fr motion
 
 # R/W needed for motion to update configurations
 VOLUME /etc/motion
